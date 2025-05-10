@@ -11,12 +11,24 @@ composer install --no-dev --optimize-autoloader
 mkdir -p /tmp
 mkdir -p api
 
+# Copy necessary files to api directory
+cp -r app api/
+cp -r bootstrap api/
+cp -r config api/
+cp -r database api/
+cp -r resources api/
+cp -r routes api/
+cp -r storage api/
+cp -r vendor api/
+cp .env api/
+cp artisan api/
+
 # Set up database
 touch /tmp/database.sqlite
 chmod 666 /tmp/database.sqlite
 
 # Run migrations
-php artisan migrate --force
+cd api && php artisan migrate --force
 
 # Cache everything
 php artisan config:cache
