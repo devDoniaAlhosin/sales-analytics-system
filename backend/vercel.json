@@ -1,6 +1,8 @@
 {
     "version": 2,
     "framework": null,
+    "buildCommand": "mkdir -p api && cp -r app bootstrap config database resources routes storage vendor artisan .env api/",
+    "outputDirectory": "api",
     "functions": {
         "api/*.php": {
             "runtime": "vercel-php@0.6.0"
