@@ -1,0 +1,23 @@
+.custom-breadcrumb {
+    background-color: var(--primary-color);
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    .breadcrumb{
+      margin-bottom: 0px;
+    }
+
+  .breadcrumb-item {
+    list-style: none;
+    text-decoration: none;
+    a{
+      color: var(--active-color);
+    }
+  }
+    .breadcrumb-item a.active {
+      color: var(--color-active);
+    }
+  }
+  

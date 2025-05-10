@@ -1,0 +1,91 @@
+.sidebar {
+    width: 220px;
+    min-height: 100vh;
+    background-color: var(--primary-color);
+    padding: 20px;
+    color: var(--color-black);
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  
+    .sidebar-title {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+  
+    .nav-link {
+      padding-inline: 0px;
+      color: var(--color-black);
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 17px;
+      text-decoration: none;
+  
+      &:hover {
+        color: var(--active-color);
+      }
+  
+      &.active {
+        color: var(--active-color);
+        font-weight: bold;
+      }
+    }
+}
+
+// Mobile menu button
+.mobile-menu-btn {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+    background: var(--primary-color);
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+// Media queries for responsive design
+@media screen and (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+        width: 100%;
+        max-width: 280px;
+        top: 0;
+        left: 0;
+        border-radius: 0;
+        height: 100vh;
+        padding-top: 60px;
+
+        &.active {
+            transform: translateX(0);
+        }
+    }
+}
+
+// Add overlay when sidebar is active on mobile
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+
+    &.active {
+        display: block;
+    }
+}
+  
