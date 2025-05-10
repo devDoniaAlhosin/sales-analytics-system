@@ -1,10 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import DashboardLayout from "./Layouts/DashboardLayout"
-import Home from "./Pages/HomePage/Home"
-import Analytics from "./Pages/AnalyticsPage/Analytics"
+import Dashboard from "./Pages/Dashboard/Dashboard"
+import Analytics from "./Pages/Analytics/Analytics"
 import './Styles/main.scss';
-import Orders from "./Pages/OrdersPage/Orders";
-import Recommendations from "./Pages/RecommendationPage/Recommendations";
+import Orders from "./Pages/Orders/Orders";
+import Recommendations from "./Pages/Recommendations/Recommendations";
+import Home from "./Pages/Home/Home";
 function App() {
 
 const routing = createBrowserRouter([

@@ -2,5 +2,12 @@
 @use "./layouts/DashboardLayout.scss" as *;
 @use "./components/Sidebar.scss" as *;
 @use "./components/Breadcrumbs.scss" as *;
-
+@use "./pages/Orders.scss" as *;
+@use "./components/OrderForm.scss" as *;
+@use "./pages/Home.scss" as *;
+@use "./pages/Dashboard.scss" as *;
+@use "./pages/Analytics.scss" as *;
+@use "./pages/Recommendations.scss" as *;   
+@use "./components/Loader.scss" as *;
+@use "./components/Chatbot.scss" as *;
 
