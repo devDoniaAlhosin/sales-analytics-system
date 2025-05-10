@@ -1,6 +1,5 @@
 {
     "version": 2,
-    "framework": "laravel",
     "buildCommand": "bash vercel-build.sh",
     "outputDirectory": "public",
     "builds": [
