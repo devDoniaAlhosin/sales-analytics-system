@@ -1,6 +1,10 @@
 #!/bin/bash
 
-# Install dependencies
+# Install system dependencies
+apt-get update
+apt-get install -y libssl1.1 libssl-dev
+
+# Install PHP dependencies
 composer install --no-dev --optimize-autoloader
 
 # Create necessary directories
