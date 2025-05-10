@@ -1,22 +1,19 @@
 {
     "version": 2,
-    "framework": null,
-    "buildCommand": "mkdir -p api && cp -r app bootstrap config database resources routes storage vendor artisan .env api/",
-    "outputDirectory": "api",
+      "framework": null,
     "functions": {
-        "api/*.php": {
-            "runtime": "vercel-php@0.6.0"
-        }
+        "api/index.php": { "runtime": "vercel-php@0.6.0" }
     },
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/api/index.php"
-        }
-    ],
+    "routes": [{
+        "src": "/(.*)",
+        "dest": "/api/index.php"
+    }],
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
+        "APP_KEY": "base64:nGUVXIjtXqmxW8ogC4e2pZIHHFqgEeg8aBFyb9iEhTU=",
+        "APP_URL": "https://sales-analytics-system-9e54nhx51-devdoniaalhosins-projects.vercel.app",
+        "GEMINI_API_KEY": "AIzaSyD0cF-pn9oS3EeJAmYbwDgGw6A6aZDLvQQ",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
