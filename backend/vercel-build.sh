@@ -9,7 +9,7 @@ composer install --no-dev --optimize-autoloader
 
 # Create necessary directories
 mkdir -p /tmp
-mkdir -p public
+mkdir -p api
 
 # Set up database
 touch /tmp/database.sqlite
@@ -24,5 +24,5 @@ php artisan route:cache
 php artisan view:cache
 
 # Ensure proper permissions
-chmod -R 755 public
-chmod -R 777 public/storage 
+chmod -R 755 api
+chmod -R 777 storage 
